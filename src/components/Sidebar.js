@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useProductsContext } from "../context/products_context";
 import { FaTimes } from "react-icons/fa";
-import { links } from "../utils/constants";
+import { links, socialLinks } from "../utils/constants";
 import styled from "styled-components";
+import SocialLink from "./SocialLink";
 import CartButtons from "./CartButtons";
 import { useUserContext } from "../context/user_context";
 import Logo from "./logo";
@@ -41,6 +42,11 @@ const Sidebar = () => {
           )}
         </ul>
         <CartButtons />
+        <ul className='nav-links'>
+          {socialLinks.map((link) => {
+            return <SocialLink {...link} key={link.id} />;
+          })}
+        </ul>
       </aside>
     </SidebarContainer>
   );
@@ -109,6 +115,26 @@ const SidebarContainer = styled.div`
   }
   .cart-btn-wrapper {
     margin: 2rem auto;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    li {
+      margin: 0 0.5rem;
+    }
+    a {
+      color: var(--clr-grey-3);
+      font-size: 1.3rem;
+      text-transform: capitalize;
+      letter-spacing: var(--spacing);
+      padding: 0.5rem;
+      &:hover {
+        border-bottom: 2px solid var(--clr-primary-7);
+      }
+    }
+    svg {
+      font-size: 1.3rem;
+    }
   }
   @media screen and (min-width: 992px) {
     .sidebar {
