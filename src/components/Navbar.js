@@ -34,7 +34,7 @@ const Nav = () => {
         <CartButtons />
         <ul className='nav-links'>
           {socialLinks.map((link) => {
-            return <SocialLink {...link} key={link.id} itemClass='nav-icon' />;
+            return <SocialLink {...link} key={link.id} />;
           })}
         </ul>
       </div>
@@ -74,7 +74,12 @@ const NavContainer = styled.nav`
   .nav-links {
     display: none;
   }
-
+  .nav-icon {
+    display: none;
+  }
+  .cart-btn-wrapper {
+    display: none;
+  }
   @media (min-width: 992px) {
     .nav-toggle {
       display: none;
@@ -83,9 +88,6 @@ const NavContainer = styled.nav`
       display: grid;
       grid-template-columns: auto 1fr auto auto;
       align-items: center;
-    }
-    .nav-icons {
-      display: inline-flex;
     }
 
     .nav-links {
@@ -107,6 +109,9 @@ const NavContainer = styled.nav`
       svg {
         font-size: 1.3rem;
       }
+    }
+    .cart-btn-wrapper {
+      display: grid;
     }
   }
 `;
