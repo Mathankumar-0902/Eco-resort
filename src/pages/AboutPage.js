@@ -26,19 +26,25 @@ const AboutPage = () => {
             designed to enrich your life.The company is driven by ethics and
             values as much as its innovative vision.
           </p>
-          <p className='icon'>
-            <BsFillTelephoneFill />
-            <b> Contact :</b>
+          <p className='contact'>
+            <span className='icon'>
+              <BsFillTelephoneFill />
+              <b> Contact :</b>
+            </span>
             <span> +94 779214491</span>
           </p>
-          <p className='icon'>
-            <AiFillMail />
-            <b>Email : </b>
-            <span> booking@dunevillagegroup.com</span>
+          <p className='contact'>
+            <span className='icon'>
+              <AiFillMail />
+              <b>Email :</b>
+            </span>
+            <span>booking@dunevillagegroup.com</span>
           </p>
-          <p className='icon'>
-            <AiFillSkype />
-            <b>Skype : </b>
+          <p className='contact'>
+            <span className='icon'>
+              <AiFillSkype />
+              <b>Skype :</b>
+            </span>
             <span> dunevillagegroup</span>
           </p>
         </article>
@@ -86,6 +92,13 @@ const Wrapper = styled.section`
   }
   @media (min-width: 992px) {
     grid-template-columns: 1fr 1fr;
+    .contact {
+      display: flex;
+      align-items: center;
+    }
+    .icon {
+      margin-right: 5px;
+    }
   }
 `;
 export default AboutPage;
