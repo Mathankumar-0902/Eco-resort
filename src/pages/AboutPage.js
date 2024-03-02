@@ -24,7 +24,12 @@ const AboutPage = () => {
             with the enthic communities, to regional cuisine, the entire Evolve
             Back Experience is inspired by the local, delivered in luxury and
             designed to enrich your life.The company is driven by ethics and
-            values as much as its innovative vision.
+            values as much as its innovative vision.The Dune is not just a
+            hotel, but a way of life. We have created and built this Eco Village
+            in a way that really emphases on wellbeing, organic living, nature,
+            purity of the mind, body and soul. Furthermore, Dune Eco Village and
+            Spa is an oasis of peace, a Lost Paradise where time slows down in
+            this incredibly fast-paced world.
           </p>
           <p className='contact'>
             <span className='icon'>
